@@ -21,7 +21,7 @@ except Exception as e:
 
 def post_to_reddit(title, content):
     try:
-        subreddit = reddit.subreddit("motivation")  # Change to your subreddit
+        subreddit = reddit.subreddit("test")  # Change to your subreddit
         subreddit.submit(title, selftext=content)
         logger.info(f"Post successfully submitted with title: '{title}'")
     except Exception as e:
