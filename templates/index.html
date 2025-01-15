@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Bot</title>
+</head>
+<body>
+    <h1>Reddit Bot is Running!</h1> 
+    <button onclick="startScheduler()" id="isStarted">Start Scheduler</button> 
+    <button onclick="stopScheduler()" id="stopButton" style="display: none;">Stop Scheduler</button> 
+    <script> 
+        function startScheduler() { 
+            fetch('/start') 
+            .then(response => response.json()) 
+            .then(data => {
+                alert(data.message);
+                document.getElementById("isStarted").innerText = "Started";
+                document.getElementById("stopButton").style.display = "inline";
+            }) 
+            .catch(error => console.error('Error:', error)); 
+        } 
+
+        function stopScheduler() { 
+            fetch('/stop') 
+            .then(response => response.json()) 
+            .then(data => { 
+                alert(data.message); 
+                document.getElementById("isStarted").innerText = "Start Scheduler"; 
+                document.getElementById("stopButton").style.display = "none"; 
+            }) 
+            .catch(error => console.error('Error:', error)); 
+        }
+    </script>
+</body>
+</html>
