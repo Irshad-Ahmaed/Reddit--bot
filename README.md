@@ -2,6 +2,11 @@
 
 This Reddit bot automatically posts content and comments on posts using Groq AI for content generation. It also supports scheduled posting and commenting.
 
+## 🖼️ Screen Shots
+[Screenshot](screenshots/s1.png "Post & Comment")
+[Screenshot](screenshots/s2.png "Post & Comment")
+[Screenshot](screenshots/s3.png "Log comments while posting")
+
 ## 🚀 Setup Instructions
 
 ### 1. Clone the repository
