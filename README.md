@@ -2,28 +2,12 @@
 
 This Reddit bot automatically posts content and comments on posts using Groq AI for content generation. It also supports scheduled posting and commenting.
 
-## 📦 Project Structure
-```
-.
-├── .env                 # Environment variables (API keys, credentials)
-├── main.py             # Main entry point for the bot
-├── scheduler.py        # Scheduler for daily posting and commenting
-├── reddit_client.py    # Reddit API integration using PRAW
-├── groq_client.py      # Groq AI API integration
-├── logger.py           # Logging setup for error handling and debugging
-├── requirements.txt    # Project dependencies
-├── README.md           # Project documentation
-└── .venv               # Virtual environment (optional)
-```
-
----
-
 ## 🚀 Setup Instructions
 
 ### 1. Clone the repository
 ```bash
-git clone <repo-url>
-cd <repo-folder>
+git clone https://github.com/Irshad-Ahmaed/Reddit--bot.git
+cd Reddit--bot
 ```
 
 ### 2. Create a Virtual Environment (Optional but Recommended)
@@ -63,12 +47,3 @@ python main.py
 - **Groq AI Integration**: Content and comment generation using Groq AI.
 - **Scheduler Integration**: Automated posting and commenting at scheduled times.
 - **Error Handling with Logging**: Logs errors and activities for better traceability.
-
----
-
-## ✅ Customization
-- **Change Posting Time:** Modify the `POST_TIME` in the `.env` file.
-- **Subreddit Selection:** Change the subreddit name in `reddit_client.py`.
-- **Logging Configuration:** Customize the `logger.py` file for more detailed logging.
-
----
