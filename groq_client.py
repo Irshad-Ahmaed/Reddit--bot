@@ -33,7 +33,7 @@ def generate_comment(prompt="Generate a positive comment for a Reddit post."):
     response = requests.post(
         url,
         headers={"Authorization": f"Bearer {api_key}"},
-        json={"model": "llama-3.3-70b-versatile", "messages": [{"role": "user", "content": prompt}], "max_tokens": 100}
+        json={"model": "llama-3.3-70b-versatile", "messages": [{"role": "user", "content": prompt}], "max_tokens": 50}
     )
     
     if response.status_code == 200:

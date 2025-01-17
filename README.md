@@ -37,6 +37,7 @@ REDDIT_PASSWORD=your_password
 USER_AGENT=your_bot_name
 GROQ_API_KEY=your_groq_api_key
 POST_TIME=16:00
+COMMENT_TIME=16:00
 ```
 
 ### 5. Run the Bot
@@ -44,7 +45,8 @@ POST_TIME=16:00
 python main.py
 ```
 
----
+After running the main.py file go to the `http://127.0.0.1:8000` url to start the scheduler
+
 
 ## 📦 Features
 - **Automated Posting**: Posts content daily at a specified time.
