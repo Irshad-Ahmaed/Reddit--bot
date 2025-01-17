@@ -9,6 +9,7 @@ from logger import logger
 
 # Load environment variables
 load_dotenv()
+
 POST_TIME = os.getenv("POST_TIME")
 COMMENT_TIME = os.getenv("COMMENT_TIME")
 
@@ -18,7 +19,6 @@ def scheduled_post():
     post_to_reddit(title, content)
 
 def scheduled_comment():
-    """Scheduled task for commenting on posts."""
     comment_content = generate_comment()
     comment_on_latest_posts(subreddit_name="test", comment_content=comment_content)
 

@@ -21,10 +21,12 @@ def read_root(request: Request):
 
 @app.get("/start")
 def start_bot():
-    thread = threading.Thread(target=start_scheduler)
-    thread.start()
-    logger.info("Scheduler started!")
-    return {"message": "Scheduler started!"}
+    if not stop_event.is_set():
+        thread = threading.Thread(target=start_scheduler, daemon=True)
+        thread.start()
+        logger.info("Scheduler started!")
+        return {"message": "Scheduler started!"}
+    return {"message": "Scheduler is already running!"}
 
 @app.get("/stop")
 def stop_bot(): 

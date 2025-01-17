@@ -3,7 +3,6 @@ from dotenv import load_dotenv
 import os
 from logger import logger
 
-# Load environment variables
 load_dotenv()
 
 # Initialize Reddit client with logging
